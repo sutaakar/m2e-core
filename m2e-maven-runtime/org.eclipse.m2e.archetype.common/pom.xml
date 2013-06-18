@@ -68,8 +68,7 @@
               jchardet,
               jdom,
               oro,
-              plexus-velocity,
-              velocity
+              plexus-velocity
             </Embed-Dependency>
 
             <_exportcontents>
@@ -81,7 +80,10 @@
             <Import-Package>
               !*
             </Import-Package>
-            <Require-Bundle>org.eclipse.m2e.maven.runtime;bundle-version="[1.5.0,1.6.0)"</Require-Bundle>
+            <Require-Bundle>
+              org.eclipse.m2e.maven.runtime;bundle-version="[1.5.0,1.6.0)",
+              org.apache.velocity;bundle-version="[1.5.0,1.6.0)"
+            </Require-Bundle>
           </instructions>
         </configuration>
       </plugin>
