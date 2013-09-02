@@ -377,12 +377,7 @@ public class MavenPluginActivator extends Plugin {
   }
 
   public static String getUserAgent() {
-    // cast is necessary for eclipse 3.6 compatibility
-    String osgiVersion = (String) Platform
-        .getBundle("org.eclipse.osgi").getHeaders().get(org.osgi.framework.Constants.BUNDLE_VERSION); //$NON-NLS-1$
-    String m2eVersion = plugin.qualifiedVersion;
-    String javaVersion = System.getProperty("java.version", "unknown"); //$NON-NLS-1$ $NON-NLS-1$
-    return "m2e/" + osgiVersion + "/" + m2eVersion + "/" + javaVersion; //$NON-NLS-1$ $NON-NLS-1$
+    return "m2e/" + plugin.version;
   }
 
   public IRepositoryRegistry getRepositoryRegistry() {

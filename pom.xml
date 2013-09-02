@@ -96,6 +96,7 @@
     <module>org.eclipse.m2e.lifecyclemapping.defaults</module>
     <module>org.eclipse.m2e.discovery</module>
     <module>org.eclipse.m2e.scm</module>
+    <module>org.eclipse.m2e.stats</module>
 
     <!-- common test helpers -->
     <module>org.eclipse.m2e.tests.common</module>
