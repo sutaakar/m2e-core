@@ -64,7 +64,7 @@ abstract class ProjectCachePlunger<Key> {
       keyProjects.remove(cacheKey, pom);
       if(forceDependencyUpdate && RepositoryPolicy.UPDATE_POLICY_ALWAYS.equals(session.getUpdatePolicy())
           && session.getCache().get(session, cacheKey) == null) {
-        session.getCache().put(session, cacheKey, Boolean.TRUE);
+//        session.getCache().put(session, cacheKey, Boolean.TRUE);
         for(File affectedPom : keyProjects.removeAll(cacheKey)) {
           affectedProjects.add(affectedPom);
           projectKeys.remove(affectedPom, cacheKey);
