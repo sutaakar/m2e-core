@@ -170,8 +170,11 @@ public enum PomTemplateContext {
       List<String> pathElements = new ArrayList<String>();
       String configImpl = null;
 
+      List<String> configurationParentElements = Arrays.asList("plugin", "execution", "reportSet");
+
       Element configNode = (Element) node;
-      while(configNode != null && !getNodeName().equals(configNode.getNodeName())) {
+      while(configNode != null && !(getNodeName().equals(configNode.getNodeName())
+          && configurationParentElements.contains(configNode.getParentNode().getNodeName()))) {
 
         String impl = configNode.getAttribute("implementation");
         if(impl != null && !impl.trim().isEmpty()) {
